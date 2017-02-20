@@ -27,7 +27,7 @@ var db = mysql.createConnection({
     charset: 'utf8'
 });
 db.connect();
-db.query("CREATE TABLE IF NOT EXISTS magtab (cnt INTEGER, lastseestr TEXT, filename TEXT, fileext TEXT, likeext INTEGER, maxsize INTEGER, pub TEXT, puburl TEXT, mag TEXT, name TEXT, totalsize INTEGER, filenum INTEGER, ip TEXT, port INTEGER, lastsee BIGINT) ENGINE=MyISAM; ");
+db.query("CREATE TABLE IF NOT EXISTS `magtab` (`cnt` INT(11) NULL DEFAULT NULL,`lastseestr` CHAR(20) NULL DEFAULT NULL,`filename` VARCHAR(255) NULL DEFAULT NULL,`fileext` VARCHAR(150) NULL DEFAULT NULL,`likeext` INT(11) NULL DEFAULT NULL,`maxsize` INT(11) NULL DEFAULT NULL,`pub` VARCHAR(60) NULL DEFAULT NULL,`puburl` VARCHAR(255) NULL DEFAULT NULL,`mag` CHAR(60) NULL DEFAULT NULL,`name` VARCHAR(255) NULL DEFAULT NULL,`totalsize` INT(11) NULL DEFAULT NULL,`filenum` INT(11) NULL DEFAULT NULL,`ip` CHAR(15) NULL DEFAULT NULL,`port` INT(11) NULL DEFAULT NULL,`lastsee` BIGINT(20) NULL DEFAULT NULL) COLLATE='utf8_general_ci' ENGINE=MyISAM;");
 
 
 var p2p = P2PSpider({
