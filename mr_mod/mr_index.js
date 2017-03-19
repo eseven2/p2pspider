@@ -99,7 +99,7 @@ p2p.on('metadata', function (metadata) {
     }
     totalSize = Math.ceil(totalSize/(1024*1024));
     maxSize = Math.ceil(maxSize/(1024*1024));
-    var fileext = filename.split('.').pop().toLowerCase();
+    var fileext = filename.split('.').pop().toLowerCase().substr(0,145);
     var likeext = 0;
     if(fileext.match(/(avi|mp4|mkv|wmv|vob|mpg|rmvb|m4v|m2ts|flv|mov|rm|3gp|mpeg|divx)$/)){
         likeext = 1;
